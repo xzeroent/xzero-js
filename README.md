@@ -1,7 +1,7 @@
 ﻿
 # Xzero JS
 
-Xzero JS is modern JavaScript library (ES6 module) for displaying 3D models, scenes and 360° panoramas on the web. Just use the <xzero-js> element to get started. Our full documentation can be found [HERE](https://xzerojs.org).
+Xzero JS is modern JavaScript library (ES6 module) for displaying 3D models, scenes and 360° panoramas on the web. Just use the ```html<xzero-js>``` element to get started. Our full documentation can be found [HERE](https://xzerojs.org).
 
 ```html
 <xzero-js src="model.gltf" loading="lazy"></xzero-js>
@@ -30,7 +30,7 @@ Load the script and add the <xzero-js> HTML element to your page.
 ### CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/xzero-js@1.1.7/xzero.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xzero-js@1.1.8/xzero.min.js"></script>
 ```
 
 ### NPM
