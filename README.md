@@ -35,7 +35,7 @@ Load the script and add the <xzero-js> HTML element to your page.
 
 ### NPM
 
-```powershell
+```bash
 npm i xzero-js
 ```
 
@@ -44,7 +44,7 @@ import * as XzeroJS from "xzero-js";
 ```
 
 
-## ES6 module import
+### ES6 module import
 
 Instead of loading the module with a separate ```html <script type="module">``` tag you can import it to your existing script module:
 
@@ -63,7 +63,7 @@ if ( document.querySelector('xzero-js') ) {
 ```
 
 
-## Plugins
+### Plugins
 
 ```javascript
 import { Animations } from "./core/Animations.js";
@@ -76,6 +76,136 @@ import { SoftShadow } from './core/SoftShadow.js';
 import { OrbitControls } from "./three/OrbitControls.mod.js";
 ```
 
+
+# Getting Started
+
+## Attributes/Properties
+Attributes are specified in the HTML element code like ```html <xzero-js attribute-name="value"></xzero-js>```
+
+Properties can be accessed with JavaScript code like element.propertyName = "value";   Property names are in "camelCase"!
+
+### **BASICS**
+
+### src (source)
+The source URL of the 3D file. All resources (like textures) should be in the same directory unless you specify a resource-path.
+See the supported file types.
+
+```html
+<xzero-js id="example" src="assets/model.fbx"></xzero-js>
+					
+<button onclick="document.getElementById('example').src='assets/origami.stl';">
+	Change src
+</button>
+```
+
+| Attribute | Type     | Property                |
+| :-------- | :------- | :------------------------- |
+| `<xzero-js src="file.fbx" ...>` | `URL String` | `element.src = "file.fbx";` |
+
+
+### resource-path
+Defines a path from which all resources (like textures) are loaded.
+
+
+| Attribute | Type     | Property                |
+| :-------- | :------- | :------------------------- |
+| `<xzero-js resource-path="https://www.example.com/3d/assets/" ...>` | `URL String` | `element.resourcePath = "https://www.example.com/3d/assets/";` |
+
+
+### draco-path
+This setting only affects Draco-compressed GLTF files. The Draco decoder files are loaded from this path.
+
+
+| Attribute | Type     | Property                |
+| :-------- | :------- | :------------------------- |
+| `<xzero-js draco-path="https://www.example.com/draco-decoder/" ...>` | `URL String` | `element.dracoPath = "https://www.example.com/draco-decoder/";` |
+
+*If draco-path is not set, the "draco" directory should be in the same directory as the 3D model.
+For example: If src is /assets/3d/my-model.gltf, the draco files should be at /assets/3d/draco/*
+
+
+### env (environment)
+URL to an environment map for material reflectivity or use as panorama background. The image must be in equirectangular projection and the dimensions should be a power of two: 256x128, 512x256, 1024x512, 2048x1024 or 4096x2048 pixels.
+See Reflectivity.
+
+```html
+<xzero-js src="assets/model.fbx" env="assets/environment.jpg" autorotate></xzero-js>
+```
+*If src is not set, the image is displayed as panorama background.*
+
+| Attribute | Type     | Property                |
+| :-------- | :------- | :------------------------- |
+| `<xzero-js env="example.jpg" ...>` | `URL String` | `element.env = "example.jpg";` |
+
+### env-background
+Whether the environment map is displayed as panorama background.
+
+```html
+<xzero-js src="assets/model.fbx" env="assets/environment.jpg" env-background elevation-limit="-90 90" autorotate></xzero-js>
+```
+*If src is not set, the image is displayed as panorama background.*
+
+| Attribute | Type     | Property                |
+| :-------- | :------- | :------------------------- |
+| `<xzero-js env-background ...>` | `Boolean` | `element.envBackground = true;` |
+
+
+### ratio
+If the height of the ```<xzero-js>``` element is not set by CSS styles, the height is determined by its width and this aspect ratio.
+
+```html
+<xzero-js style="display:inline-block" src="assets/hyper.fbx" ratio="3:2"></xzero-js>
+<xzero-js style="display:inline-block" src="assets/hyper.fbx" ratio="16:9"></xzero-js>
+```
+
+| Attribute | Format     | Property                |
+| :-------- | :------- | :------------------------- |
+| `<hyper-3d ratio="3:2" ...>` | `Number:Number` | `element.src = "3:2";` |
+
+
+### autorotate
+Whether the direction of view rotates over time.
+
+```html
+<hyper-3d src="assets/hyper.fbx" elevation="45" autorotate autorotate-delay="1" autorotate-speed="1.5" autorotate-elevation="0"></hyper-3d>
+```
+
+| Attribute | Type     | Property                |
+| :-------- | :------- | :------------------------- |
+| `<hyper-3d autorotate ...>` | `Boolean` | `element.autorotate = true;` |
+
+### autorotate-delay
+Specifies the duration after which autorotate starts or resumes after an interruption.
+
+| Attribute | Type     | Property                |
+| :-------- | :------- | :------------------------- |
+| `<hyper-3d autorotate-delay="4" ...>` | `Number (duration in seconds) [Default=0]` | `element.autorotateDelay = 4;` |
+
+### autorotate-speed
+Specifies the speed of the rotation. You can use a negative factor to reverse the rotation direction.
+
+| Attribute | Type     | Property                |
+| :-------- | :------- | :------------------------- |
+| `<hyper-3d autorotate-speed="1.8" ...>` | `Number (factor) [Default=1]` | `element.autorotateSpeed = 1.8;` |
+
+### autorotate-elevation
+Whether the elevation rotates towards this value.
+
+| Attribute | Type     | Property                |
+| :-------- | :------- | :------------------------- |
+| `<hyper-3d autorotate-elevation="0" ...>` | `Number (degree of range: -90 to 90)` | `element.autorotateElevation = 0;` |
+
+
+### debug
+Displays 3D axes and helpful information for setup and development. Logs information about the object hierarchy and materials in the developer console.
+
+```html
+<hyper-3d src="assets/hyper.fbx" debug zoomable></hyper-3d>
+```
+
+| Attribute | Type     | Property                |
+| :-------- | :------- | :------------------------- |
+| `<hyper-3d debug ...>` | `Boolean` | `element.debug = true;` |
 
 ## Documentation
 
