@@ -1,6 +1,6 @@
 {
   "name": "xzero-js",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Xzero JS is modern JavaScript library (ES6 module) for displaying 3D models, scenes and 360° panoramas on the web. Just use the <xzero> element to get started.",
   "homepage": "https://github.com/xzeroent/xzero-js#README",
   "main": "xzero.min.js",
