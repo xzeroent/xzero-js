@@ -30,7 +30,7 @@ Load the script and add the <xzero-js> HTML element to your page.
 ### CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/xzero-js@1.1.8/xzero.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xzero-js@1.1.9/xzero.min.js"></script>
 ```
 
 ### NPM
