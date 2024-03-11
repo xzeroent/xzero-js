@@ -46,7 +46,7 @@ import * as XzeroJS from "xzero-js";
 
 ### ES6 module import
 
-Instead of loading the module with a separate ```html <script type="module">``` tag you can import it to your existing script module:
+Instead of loading the module with a separate ```<script type="module">``` tag you can import it to your existing script module:
 
 ```javascript
 import * as XzeroJS from "./xzero.min.js";
