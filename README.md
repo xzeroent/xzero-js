@@ -154,58 +154,58 @@ Whether the environment map is displayed as panorama background.
 If the height of the ```<xzero-js>``` element is not set by CSS styles, the height is determined by its width and this aspect ratio.
 
 ```html
-<xzero-js style="display:inline-block" src="assets/hyper.fbx" ratio="3:2"></xzero-js>
-<xzero-js style="display:inline-block" src="assets/hyper.fbx" ratio="16:9"></xzero-js>
+<xzero-js style="display:inline-block" src="assets/model.fbx" ratio="3:2"></xzero-js>
+<xzero-js style="display:inline-block" src="assets/model.fbx" ratio="16:9"></xzero-js>
 ```
 
 | Attribute | Format     | Property                |
 | :-------- | :------- | :------------------------- |
-| `<hyper-3d ratio="3:2" ...>` | `Number:Number` | `element.src = "3:2";` |
+| `<xzero-js ratio="3:2" ...>` | `Number:Number` | `element.src = "3:2";` |
 
 
 ### autorotate
 Whether the direction of view rotates over time.
 
 ```html
-<hyper-3d src="assets/hyper.fbx" elevation="45" autorotate autorotate-delay="1" autorotate-speed="1.5" autorotate-elevation="0"></hyper-3d>
+<xzero-js src="assets/model.fbx" elevation="45" autorotate autorotate-delay="1" autorotate-speed="1.5" autorotate-elevation="0"></xzero-js>
 ```
 
 | Attribute | Type     | Property                |
 | :-------- | :------- | :------------------------- |
-| `<hyper-3d autorotate ...>` | `Boolean` | `element.autorotate = true;` |
+| `<xzero-js autorotate ...>` | `Boolean` | `element.autorotate = true;` |
 
 ### autorotate-delay
 Specifies the duration after which autorotate starts or resumes after an interruption.
 
 | Attribute | Type     | Property                |
 | :-------- | :------- | :------------------------- |
-| `<hyper-3d autorotate-delay="4" ...>` | `Number (duration in seconds) [Default=0]` | `element.autorotateDelay = 4;` |
+| `<xzero-js autorotate-delay="4" ...>` | `Number (duration in seconds) [Default=0]` | `element.autorotateDelay = 4;` |
 
 ### autorotate-speed
 Specifies the speed of the rotation. You can use a negative factor to reverse the rotation direction.
 
 | Attribute | Type     | Property                |
 | :-------- | :------- | :------------------------- |
-| `<hyper-3d autorotate-speed="1.8" ...>` | `Number (factor) [Default=1]` | `element.autorotateSpeed = 1.8;` |
+| `<xzero-js autorotate-speed="1.8" ...>` | `Number (factor) [Default=1]` | `element.autorotateSpeed = 1.8;` |
 
 ### autorotate-elevation
 Whether the elevation rotates towards this value.
 
 | Attribute | Type     | Property                |
 | :-------- | :------- | :------------------------- |
-| `<hyper-3d autorotate-elevation="0" ...>` | `Number (degree of range: -90 to 90)` | `element.autorotateElevation = 0;` |
+| `<xzero-js autorotate-elevation="0" ...>` | `Number (degree of range: -90 to 90)` | `element.autorotateElevation = 0;` |
 
 
 ### debug
 Displays 3D axes and helpful information for setup and development. Logs information about the object hierarchy and materials in the developer console.
 
 ```html
-<hyper-3d src="assets/hyper.fbx" debug zoomable></hyper-3d>
+<xzero-js src="assets/model.fbx" debug zoomable></xzero-js>
 ```
 
 | Attribute | Type     | Property                |
 | :-------- | :------- | :------------------------- |
-| `<hyper-3d debug ...>` | `Boolean` | `element.debug = true;` |
+| `<xzero-js debug ...>` | `Boolean` | `element.debug = true;` |
 
 ## Documentation
 
