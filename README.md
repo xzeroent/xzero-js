@@ -110,7 +110,7 @@ See the supported file types.
 - **Property:** `element.src = "file.fbx";`
 
 ```html
-<xzero-js id="example" src="assets/xzero.fbx"></xzero-js>
+<xzero-js id="example" src="assets/3d-model"></xzero-js>
 
 <button onclick="document.getElementById('example').src='assets/origami.stl';">
   Change src
@@ -170,12 +170,12 @@ If the height of the `<xzero-js>` element is not set by CSS styles, the height i
 ```html
 <xzero-js
   style="display:inline-block"
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   ratio="3:2"
 ></xzero-js>
 <xzero-js
   style="display:inline-block"
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   ratio="16:9"
 ></xzero-js>
 ```
@@ -192,7 +192,7 @@ Whether the direction of view rotates over time.
 
 ```html
 <xzero-js
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   env="assets/environment.jpg"
   autorotate
 ></xzero-js>
@@ -209,7 +209,7 @@ Displays 3D axes and helpful information for setup and development. Logs informa
 - **Property:** `element.debug = true;`
 
 ```html
-<xzero-js src="assets/xzero.fbx" debug zoomable></xzero-js>
+<xzero-js src="assets/3d-model" debug zoomable></xzero-js>
 ```
 
 ---
@@ -227,7 +227,7 @@ Specifies the horizontal angle of view.
 
 ```html
 <xzero-js
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   elevation="45"
   autorotate
   autorotate-delay="1"
@@ -242,7 +242,7 @@ Specifies the horizontal angle of view.
 
 ```html
 <xzero-js
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   debug
   direction="-45"
   direction-limit="-70 70"
@@ -263,7 +263,7 @@ Specifies the vertical angle of view.
 
 ```html
 <xzero-js
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   debug
   elevation="45"
   elevation-limit="-90 90"
@@ -298,12 +298,12 @@ Specifies the inertia of rotation by mouse or touch.
 Rotate to see the difference:<br /><br />
 <xzero-js
   style="display:inline-block"
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   inertia="0"
 ></xzero-js>
 <xzero-js
   style="display:inline-block"
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   inertia="1"
 ></xzero-js>
 ```
@@ -322,7 +322,7 @@ Specifies the distance to the model.
 ```html
 <xzero-js
   id="example"
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   debug
   zoomable
   zoom="1.25"
@@ -371,7 +371,7 @@ See Positions and Units.
 ```html
 <xzero-js
   id="example"
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   debug
   center="-0.5 0.2 0"
 ></xzero-js>
@@ -448,7 +448,7 @@ Specifies the playback speed.
 ```html
 <xzero-js
   id="example"
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   playing
   loop
   speed="1.5"
@@ -474,7 +474,7 @@ Specifies the current animation time, even if the animation is not playing.
 The time cannot be set to a value lower than `start` or higher than `end`.
 
 ```html
-<xzero-js id="example" src="assets/xzero.fbx" time="1.25"></xzero-js>
+<xzero-js id="example" src="assets/3d-model" time="1.25"></xzero-js>
 <button onclick="document.getElementById('example').time = 2.1;">
   Change time
 </button>
@@ -494,7 +494,7 @@ The `end` time must be higher than the `start` time.
 
 ```html
 A-B Play / Playback Range<br /><br />
-<xzero-js src="assets/xzero.fbx" playing loop start="1.6" end="2.1"></xzero-js>
+<xzero-js src="assets/3d-model" playing loop start="1.6" end="2.1"></xzero-js>
 ```
 
 ---
@@ -516,7 +516,7 @@ The geometry should be at a positive Y position.
 
 ```html
 <xzero-js
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   reflection="0.5"
   reflection-softness="0.75"
   playing
@@ -542,7 +542,7 @@ Only geometry with visible faces on the bottom side casts shadows.
 
 ```html
 <xzero-js
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   elevation="15"
   shadow="1"
   shadow-softness="0.75"
@@ -627,12 +627,12 @@ Specifies the strength of the ambient light. This light has no position or direc
 ```html
 <xzero-js
   style="display:inline-block"
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   ambient-light="0"
 ></xzero-js>
 <xzero-js
   style="display:inline-block"
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   ambient-light="0.8"
 ></xzero-js>
 ```
@@ -653,13 +653,13 @@ Specifies the strength of a point light. The light is centered above the model b
 ```html
 <xzero-js
   style="display:inline-block"
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   point-light="0"
   autorotate
 ></xzero-js>
 <xzero-js
   style="display:inline-block"
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   point-light="0.8"
   point-light-position="-1 1 0.5"
   autorotate
@@ -682,7 +682,7 @@ Specifies the strength of the camera light.
 
 ```html
 <xzero-js
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   camera-light="0.5"
   point-light="0"
   ambient-light="0.25"
@@ -726,7 +726,7 @@ The current loading state. You can use the CSS attribute selector to apply CSS s
 The attribute is read-only.
 
 ```html
-<xzero-js id="example" src="assets/xzero.fbx"></xzero-js>
+<xzero-js id="example" src="assets/3d-model"></xzero-js>
 
 <style>
   /* fade in when loaded */
@@ -754,7 +754,7 @@ The attribute/property is read-only.
 
 ```html
 Click or Grab?<br /><br />
-<xzero-js id="example" src="assets/xzero.fbx"></xzero-js>
+<xzero-js id="example" src="assets/3d-model"></xzero-js>
 
 <script>
   document
@@ -842,7 +842,7 @@ Triggered when all files are loaded. You can use this event for final adjustment
 - **Event:** `xzero-js.addEventListener("load", function(){ alert('load complete'); });`
 
 ```html
-<xzero-js id="example" src="assets/xzero.fbx"></xzero-js>
+<xzero-js id="example" src="assets/3d-model"></xzero-js>
 <script>
   document.getElementById("example").addEventListener("load", function () {
     console.log(this.model);
@@ -923,7 +923,7 @@ Triggered when the animation ends (if `loop` is false).
 ```html
 <xzero-js
   id="example"
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   playing
   onfinish="this.animateTo({'direction':180});"
   speed="2"
@@ -938,7 +938,7 @@ Triggered when the animation restarts (if `loop` is true).
 - **Event:** `xzero-js.addEventListener("loop", function(){ console.log('loop'); });`
 
 ```html
-<xzero-js id="example" src="assets/xzero.fbx" playing loop speed="3"></xzero-js
+<xzero-js id="example" src="assets/3d-model" playing loop speed="3"></xzero-js
 ><br />
 Loops: <span id="loop-count">0</span>
 <script>
@@ -981,7 +981,7 @@ If you don't want the animation to be interrupted by grabbing, you can set `grab
 The method returns an **Animation Instance** with methods `finish()` and `cancel()`. See the `animateTo()` example.
 
 ```html
-<xzero-js id="example" src="assets/xzero.fbx"></xzero-js>
+<xzero-js id="example" src="assets/3d-model"></xzero-js>
 <button id="move-button">Move!</button>
 <script>
   let example = document.getElementById("example");
@@ -1017,7 +1017,7 @@ The method returns an **Animation Instance** with methods `finish()` and `cancel
 ```html
 <xzero-js
   id="example"
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
   color="#00FF00"
   time="3"
 ></xzero-js>
@@ -1051,7 +1051,7 @@ You can use objects with invisible materials as hotspots (for example `Material.
 The ray passes through unnamed objects, objects whose names begin with an underscore (for example `_IgnoreMe`) and invisible objects (`Object3D.visible = false`).
 
 ```html
-<xzero-js id="example" src="assets/xzero.fbx" zoom="1.5"></xzero-js><br />
+<xzero-js id="example" src="assets/3d-model" zoom="1.5"></xzero-js><br />
 <div id="result">Move the mouse over the letters!</div>
 <script>
   document
@@ -1090,7 +1090,7 @@ The ray passes through unnamed objects, objects whose names begin with an unders
 Finds an object by name and returns a THREE.js `Object3D`. See **Working with THREE.js**.
 
 ```html
-<xzero-js id="example" src="assets/xzero.fbx"></xzero-js>
+<xzero-js id="example" src="assets/3d-model"></xzero-js>
 <button id="toggle-button">Toggle "H" visibility</button>
 <script>
   document
@@ -1220,7 +1220,7 @@ Or you can import the module dynamically only when needed. The following snippet
 You can use the `:not(:defined)` CSS selector to style the element before the module is loaded. The following example creates a pseudo element to consume space till the module is loaded:
 
 ```html
-<xzero-js ratio="1:1" src="assets/xzero.fbx"></xzero-js>
+<xzero-js ratio="1:1" src="assets/3d-model"></xzero-js>
 
 <style>
   xzero-js:not(:defined)::before {
@@ -1234,7 +1234,7 @@ You can use the `:not(:defined)` CSS selector to style the element before the mo
 You can use the `:not([state=loaded])` CSS selector to style the element till the 3D model is loaded. See the `state` attribute.
 
 ```html
-<xzero-js src="assets/xzero.fbx"></xzero-js>
+<xzero-js src="assets/3d-model"></xzero-js>
 
 <style>
   /* show loading text */
@@ -1253,7 +1253,7 @@ You can use the `:not([state=loaded])` CSS selector to style the element till th
 The content between `<xzero-js>` and `</xzero-js>` is displayed if the script module is not loaded or supported by the browser.
 
 ```html
-<xzero-js src="assets/xzero.fbx"
+<xzero-js src="assets/3d-model"
   ><strong>FALLBACK CONTENT HERE</strong></xzero-js
 >
 ```
@@ -1277,7 +1277,7 @@ You can show different models based on a CSS `@media` query.
   class="desktop-model"
   ratio="2:1"
   zoom="0.8"
-  src="assets/xzero.fbx"
+  src="assets/3d-model"
 ></xzero-js>
 <xzero-js class="mobile-model" zoom="1.3" src="assets/origami.stl"></xzero-js>
 
@@ -1382,7 +1382,7 @@ Non-PBR materials determine reflectivity by the brightness of the specular color
 An example of control elements to zoom and reset the view:
 
 ```html
-<xzero-js id="example" zoom-limit="0.5 4" src="assets/xzero.fbx"></xzero-js>
+<xzero-js id="example" zoom-limit="0.5 4" src="assets/3d-model"></xzero-js>
 <button
   onclick="document.getElementById('example').moveTo({ zoom: document.getElementById('example').zoom-0.75 });"
 >
@@ -1408,7 +1408,7 @@ This example shows you how to make the element focusable and implement keyboard 
 Click the element (or press tab) to focus it. Then press the left or right arrow
 key to rotate the view.<br /><br />
 
-<xzero-js id="example" src="assets/xzero.fbx" tabindex="0"></xzero-js>
+<xzero-js id="example" src="assets/3d-model" tabindex="0"></xzero-js>
 
 <style>
   #example:focus {
@@ -1423,7 +1423,7 @@ You can show HTML elements on top with a setup like this:
 
 ```html
 <div class="model-wrap">
-  <xzero-js src="assets/xzero.fbx" style="width: 100%;"></xzero-js>
+  <xzero-js src="assets/3d-model" style="width: 100%;"></xzero-js>
   <div class="model-layer">Text on top</div>
 </div>
 
@@ -1523,7 +1523,7 @@ You can access and modify existing THREE.js objects with the `scene`, `model` an
 To create new THREE.js objects you need to import the module with code like this:
 
 ```html
-<xzero-js id="example" src="assets/xzero.fbx"></xzero-js>
+<xzero-js id="example" src="assets/3d-model"></xzero-js>
 <script type="module">
   import * as THREE from "../xzero.min.js";
 
@@ -1566,7 +1566,7 @@ See: [https://en.wikipedia.org/wiki/Same-origin_policy](https://en.wikipedia.org
 - Was the script module loaded?
 - Is the `<xzero-js>` element present, visible and big enough?
 - Was the 3D file loaded?
-- Is the 3D model working? Use a model from the documentation (for example `/docs/assets/xzero.fbx`) for testing.
+- Is the 3D model working? Use a model from the documentation (for example `/docs/assets/3d-model`) for testing.
 
 ### Model is corrupt
 
